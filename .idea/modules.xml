@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/clown-example/clown-example.iml" filepath="$PROJECT_DIR$/clown-example/clown-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clown-framework/clown-framework.iml" filepath="$PROJECT_DIR$/clown-framework/clown-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clown-lightdb/clown-lightdb.iml" filepath="$PROJECT_DIR$/clown-lightdb/clown-lightdb.iml" />
+    </modules>
+  </component>
+</project>

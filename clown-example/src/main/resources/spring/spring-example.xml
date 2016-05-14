@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:sec="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans.xsd
+       	http://www.springframework.org/schema/context
+       	http://www.springframework.org/schema/context/spring-context.xsd
+       	http://www.springframework.org/schema/aop
+       	http://www.springframework.org/schema/aop/spring-aop.xsd
+       	http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <context:component-scan base-package="com.alka.*" />
+    <!--<bean id="filterChainProxy" class="org.springframework.security.web.FilterChainProxy">-->
+		<!--<sec:filter-chain-map>-->
+			<!--<sec:filter-chain pattern="/api/**" filters="-->
+	           <!--securityContextPersistenceFilterWithASCFalse,-->
+	           <!--basicAuthenticationFilter,-->
+	           <!--exceptionTranslationFilter,-->
+	           <!--filterSecurityInterceptor" />-->
+			<!--<sec:filter-chain pattern="/**" filters="-->
+	           <!--securityContextPersistenceFilterWithASCTrue,-->
+	           <!--formLoginFilter,-->
+	           <!--exceptionTranslationFilter,-->
+	           <!--filterSecurityInterceptor" />-->
+		<!--</sec:filter-chain-map>-->
+	<!--</bean>-->
+</beans>

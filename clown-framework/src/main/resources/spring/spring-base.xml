@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans.xsd
+       	http://www.springframework.org/schema/context
+       	http://www.springframework.org/schema/context/spring-context.xsd
+       	http://www.springframework.org/schema/mvc
+       	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       	http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--启用注解-->
+    <context:annotation-config  />
+    <!--控制器扫描-->
+    <context:component-scan base-package="com.clown.*" />
+    <!--suppress UnparsedCustomBeanInspection -->
+    <!--默认的注解映射的支持-->
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean class="com.clown.framework.resolvers.RequestJsonBody"/>
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+
+    <!--启用默认servlet用于处理静态资源访问-->
+    <mvc:default-servlet-handler/>
+    <!--处理静态资源访问-->
+    <mvc:resources mapping="/static/**" location="/static/" />
+    <bean id="configPropertiesBeanDefinitionRegistry" class="com.clown.framework.core.ConfigPropertiesBeanDefinitionRegistry">
+        <property name="useCutomRequestMappingHandlerMapping" value="true"></property>
+    </bean>
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <!-- 使用disconf必须添加以下配置 -->
+    <bean id="disconfMgrBean" class="com.clown.framework.core.DefaultDisconfMgrBean"
+          destroy-method="destroy">
+    </bean>
+    <bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond"
+          init-method="init" destroy-method="destroy">
+    </bean>
+
+    <bean id="applicationContextUtil" class="com.clown.framework.core.ApplicationContextUtil" ></bean>
+
+    <!--result to json -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <!--FreeMarker整合Spring-->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPaths" value="/template/" />
+        <property name="preferFileSystemAccess" value="false" />
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="xml_escape" value-ref="fmXmlEscape"/>
+                <!--<entry key="widget" value-ref="widget"/>-->
+            </map>
+        </property>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="defaultEncoding">UTF-8</prop>
+                <prop key="template_update_delay">0</prop>
+                <prop key="locale">zh_CN</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="number_format">#.##</prop>
+                <prop key="auto_import"></prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
+        <property name="cache" value="true"/>
+        <property name="suffix" value=".ftl" />
+        <property name="exposeSpringMacroHelpers" value="true" />
+        <property name="exposeRequestAttributes" value="true" />
+        <property name="exposeSessionAttributes" value="true" />
+        <property name="contentType" value="text/html;charset=utf-8"/>
+    </bean>
+
+    <bean id="exceptionHandler" class="com.clown.framework.exceptions.DefaultHandlerExceptionResolver">
+        <property name="errorPage" value="${ms.error.page}"/>
+    </bean>
+
+  <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+    <!--添加json参数绑定-->
+
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+        <!--&lt;!&ndash;线程安全的访问session&ndash;&gt;-->
+        <!--<property name="synchronizeOnSession" value="true"/>-->
+        <!--<property name="customArgumentResolvers">-->
+            <!--<list>-->
+                <!--<bean class="com.diandiandi.framework.resolvers.RequestJsonBody"></bean>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="i18n.message"></property>
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
+	
+</beans>
