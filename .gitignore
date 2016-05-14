@@ -1,3 +1,10 @@
 .idea
-*.iml
-target
+
+clown-lightdb/target
+clown-example/target
+clown-framework/target
+
+clown-lightdb/clown-lightdb.iml
+clown-example/clown-example.iml
+clown-framework/clown-framework.iml
+.DS_Store
