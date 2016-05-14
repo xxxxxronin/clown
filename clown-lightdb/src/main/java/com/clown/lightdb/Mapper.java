@@ -345,7 +345,7 @@ public final class Mapper extends SqlSessionDaoSupport {
         statement = statementBuilder.build();
 
         if(sqlCommandType == SqlCommandType.INSERT){
-            statementBuilder.keyGenerator(new SelectKeyGenerator(buildKeyMappedStatement(statementName,"id"),false));
+            statementBuilder.keyGenerator(new SelectKeyGenerator(buildKeyMappedStatement(statementName,getMapperConfig().getPrimaryKey()),false));
             statement = statementBuilder.build();
         }
         getSqlSession().getConfiguration().addMappedStatement(statement);
