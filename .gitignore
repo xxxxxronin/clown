@@ -1,10 +1,8 @@
-.idea
-
-clown-lightdb/target
-clown-example/target
-clown-framework/target
-
-clown-lightdb/clown-lightdb.iml
-clown-example/clown-example.iml
-clown-framework/clown-framework.iml
+#  这里是说明
+*.iml
+target
 .DS_Store
+.settings
+.classpath
+.project
+*.class

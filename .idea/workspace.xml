@@ -2,11 +2,214 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1be9ac01-53c3-4096-91f9-b82f2bcb5cab" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/diandi-example.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/diandi-framework.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/diandi-lightdb.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/clown_example_war.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/clown_example_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ca_juliusdavies_not_yet_commons_ssl_0_3_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_0_2_26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baidu_disconf_disconf_client_2_6_30.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baidu_disconf_disconf_core_2_6_30.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0_rc2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_javase_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2_b02.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_rc1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_1_6_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_glxn_qrgen_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_santuario_xmlsec_1_4_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_3_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjtools_1_7_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_47.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15_1_45.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_47.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_19.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_asm_all_repackaged_2_1_64.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_cglib_2_1_64.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_1_64.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_1_64.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_1_64.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_1_64.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_0_m13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_0_m13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_0_m13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_client_cas_client_core_3_3_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_16_1_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensaml_opensaml_2_5_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensaml_openws_1_4_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensaml_xmltooling_1_3_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_owasp_esapi_esapi_2_0GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reflections_reflections_0_9_9_RC1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_cas_4_0_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_jwt_1_0_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__velocity_velocity_1_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_10_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.settings/.jsdtscope" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.settings/org.eclipse.m2e.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.settings/org.eclipse.wst.common.component" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/.settings/org.eclipse.wst.validation.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/clown-example.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/commons/DefaultAbstractAccessDecisionManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/commons/MyAbstractSecurityExpressionHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/commons/MyFilterSecurityInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/commons/SecurityConfiguration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/config/CommonConf.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/dao/UserDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/models/NodeModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/models/UserInfoModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/models/UserModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/restful/AdminRestful.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/restful/ExampleRestful.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/restful/HomeRestful.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/validators/UserInfoValidators.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/java/com/alka/example/vo/UserVo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/common.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/config.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/disconf.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/i18n/message_en_US.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/i18n/message_zh_CN.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/messages_en_US.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/messages_zh_CN.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/resources/spring/spring-example.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/webapp/hello/helloWorld.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/webapp/i18n/message_en_US.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/webapp/i18n/message_zh_CN.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/webapp/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-example/src/main/webapp/static/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/.settings/org.eclipse.m2e.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/.settings/org.eclipse.wst.common.component" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/clown-framework.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/DefaultAjaxResult.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/DefaultRequestCode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/DefaultRequestInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/RestFulController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/RestFulControllerInter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/annotations/JsonParameter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/configurations/FrameworkConfiguration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/configurations/PropertiesConfiguration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/core/ApplicationContextUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/core/ConfigPropertiesBeanDefinitionRegistry.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/core/CustomeRequestMappingHandlerMapping.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/core/DefaultDisconfMgrBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/exceptions/DefaultHandlerExceptionResolver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/filters/CrossDomainFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/listeners/FrameworkLoadListeners.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/resolvers/RequestJsonBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/restful/WelcomeRestful.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/CiphertextUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/DateUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/ExceptionUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/FileUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/JsonUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/ShortMeUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/StringUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/java/com/clown/framework/utils/ValidaterCodeUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-framework/src/main/resources/spring/spring-base.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/.settings/org.eclipse.m2e.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/.settings/org.eclipse.wst.common.component" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/clown-lightdb.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/Mapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/Pagination.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/annotations/LightColumn.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/annotations/LightTable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/core/BuildMyBatisNodeInter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/core/Condition.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/core/Join.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/core/MapperConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/core/MapperScannerConfigurerLoad.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/core/MySQLBuildNode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/core/PageBounds.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/plugins/PaginationPlugin.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/utils/BuildUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/utils/ExecutorUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/java/com/clown/lightdb/utils/SqlSessionFactoryUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/resources/mybatis/mybatis-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-lightdb/src/main/resources/spring/spring-db.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-mq/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-mq/src/main/java/com/diandi/mq/Consumer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-mq/src/main/java/com/diandi/mq/Listener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-mq/src/main/java/com/diandi/mq/Publisher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-mq/target/classes/com/diandi/mq/Consumer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-mq/target/classes/com/diandi/mq/Listener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clown-mq/target/classes/com/diandi/mq/Publisher.class" afterPath="" />
     </list>
     <ignored path="clown.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,21 +244,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clown-example/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.4166665">
+            <state vertical-scroll-proportion="0.37238494">
               <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2689243">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -170,6 +363,110 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="clown-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clown-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -707,12 +1004,12 @@
       <created>1463225447488</created>
       <option name="number" value="Default" />
       <updated>1463225447488</updated>
-      <workItem from="1463225448702" duration="3382000" />
+      <workItem from="1463225448702" duration="4072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3382000" />
+    <option name="totallyTimeSpent" value="4072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -783,18 +1080,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clown-example/pom.xml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4166665">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.20916335">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/clown-example/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2689243">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.37238494">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
