@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.clown.lightdb</groupId>
+    <artifactId>clown-lightdb</artifactId>
+    <version>1.2-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <properties>
+        <org.mybatis.version>3.3.0</org.mybatis.version>
+        <org.mybatis.spring.version>1.2.3</org.mybatis.spring.version>
+        <mysql.version>5.1.16</mysql.version>
+        <springversion>4.2.5.RELEASE</springversion>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.clown.framework</groupId>
+            <artifactId>clown-framework</artifactId>
+            <version>1.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${org.mybatis.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${org.mybatis.spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${springversion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${springversion}</version>
+        </dependency>
+
+        <!--druid 用于数据库连接池管理-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>0.2.26</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>missionsky</id>
+            <name>Missionsky</name>
+            <url>http://192.168.0.51:8081/nexus/content/repositories/missionsky</url>
+        </repository>
+    </distributionManagement>
+</project>
