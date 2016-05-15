@@ -4,7 +4,9 @@ import com.clown.lightdb.core.Condition;
 import com.clown.lightdb.core.Join;
 import com.clown.lightdb.core.MapperConfig;
 import com.clown.lightdb.core.MySQLBuildNode;
+import com.clown.lightdb.utils.BuildUtil;
 import com.clown.lightdb.utils.SqlSessionFactoryUtil;
+import org.apache.commons.collections.BagUtils;
 import org.apache.ibatis.executor.keygen.SelectKeyGenerator;
 import org.apache.ibatis.mapping.*;
 import org.apache.ibatis.scripting.xmltags.DynamicSqlSource;
@@ -273,7 +275,6 @@ public final class Mapper extends SqlSessionDaoSupport {
      */
     protected MappedStatement buildKeyMappedStatement(String statementName,String keyProperty){
         StringBuffer stringBuffer = new StringBuffer(statementName);
-        stringBuffer.append("-keystatement");
         SqlNode rootNode = new StaticTextSqlNode("SELECT LAST_INSERT_ID();");
         DynamicSqlSource dynamicSqlSource = new DynamicSqlSource(getSqlSession().getConfiguration(),rootNode);
         MappedStatement.Builder statementBuilder = new MappedStatement.Builder(getSqlSession().getConfiguration(),stringBuffer.toString(),dynamicSqlSource,SqlCommandType.UNKNOWN);
@@ -287,7 +288,7 @@ public final class Mapper extends SqlSessionDaoSupport {
                 null);
         resultMaps.add(inlineResultMapBuilder.build());
         statementBuilder.resultMaps(resultMaps);
-        statementBuilder.keyProperty(keyProperty);
+        statementBuilder.keyProperty(BuildUtil.parseEntityField(keyProperty));
         return statementBuilder.build();
 
 

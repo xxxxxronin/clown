@@ -9,7 +9,8 @@ import com.clown.lightdb.annotations.LightTable;
  */
 @LightTable(name = "ms_users")
 public class UserModel {
-    private Integer uid;
+
+    private Integer userId;
 
 
     private String userName;
@@ -31,11 +32,11 @@ public class UserModel {
         this.userName = userName;
     }
 
-    public Integer getUid() {
-        return uid;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }

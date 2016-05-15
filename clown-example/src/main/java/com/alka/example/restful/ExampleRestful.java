@@ -41,7 +41,7 @@ public class ExampleRestful extends RestFulController {
         userModel.setUserName("libin");
         userModel.setPasswd("000000");
 
-        int count = Mapper.insert(userModel,"uid").exec();
+        int count = Mapper.insert(userModel,"user_id").exec();
 //        userInfoModel = new UserInfoModel();
 //        userInfoModel.setEmail("dfdfsd");
 //        userInfoModel.setIsDisable(1);

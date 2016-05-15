@@ -2,6 +2,7 @@ package com.clown.lightdb.utils;
 
 import com.clown.lightdb.annotations.LightColumn;
 import com.clown.lightdb.annotations.LightTable;
+import org.apache.ibatis.javassist.compiler.ast.Symbol;
 import org.apache.ibatis.scripting.xmltags.IfSqlNode;
 import org.apache.ibatis.scripting.xmltags.MixedSqlNode;
 import org.apache.ibatis.scripting.xmltags.SqlNode;
@@ -9,10 +10,7 @@ import org.apache.ibatis.scripting.xmltags.StaticTextSqlNode;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by len.li on 21/3/2016.
@@ -39,6 +37,28 @@ public class BuildUtil {
         classname.append(String.valueOf(name.charAt(0)).toLowerCase());
         classname.append(name.substring(1));
         return parseFieldName(classname.toString());
+    }
+
+    /**
+     * 将表字段转换成实体对应的属性 如:user_id 转换结果为 userId
+     * @param tableFieldName
+     * @return
+     */
+    public static String parseEntityField(String tableFieldName){
+        StringBuffer stringBuffer = new StringBuffer();
+        String[] arrs = tableFieldName.split("_");
+        boolean isu = false;
+        for (String str : arrs){
+            if(!isu){
+                stringBuffer.append(str.toLowerCase());
+                isu = true;
+            }
+            else{
+                stringBuffer.append(str.substring(0,1).toUpperCase());
+                stringBuffer.append(str.substring(1,str.length()).toLowerCase());
+            }
+        }
+        return stringBuffer.toString();
     }
 
     /**
@@ -151,6 +171,10 @@ public class BuildUtil {
         result.put(INSERT_COLUMNS_LIST,new MixedSqlNode(ifSqlNode));
         result.put(INSERT_COLUMNS_VALUES,new MixedSqlNode(ifSqlNodeValues));
         return result;
+    }
+
+    public static void main(String[] args) throws Exception{
+        System.out.println(BuildUtil.parseEntityField("uid_id_dddd_fffff"));
     }
 
 
