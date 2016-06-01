@@ -68,7 +68,7 @@ public class PaginationPlugin implements Interceptor {
                 }
             }
         }
-        else{
+        else if(queryArgs[PARAMETER_INDEX] instanceof PageBounds){
              pageBounds = (PageBounds) queryArgs[PARAMETER_INDEX];
         }
 
