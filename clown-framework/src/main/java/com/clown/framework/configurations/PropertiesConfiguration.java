@@ -12,6 +12,7 @@ import java.util.Properties;
 public abstract class PropertiesConfiguration {
 
     protected final static Log logger = LogFactory.getLog(PropertiesConfiguration.class);
+    
 
     private  final static Properties properties;
 

@@ -20,6 +20,7 @@ public class DefaultAjaxResult<T> {
     private  T data;
 
     public DefaultAjaxResult() {
+
     }
 
     public DefaultAjaxResult(Integer code, String info, T data) {

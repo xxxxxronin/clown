@@ -12,6 +12,6 @@ public class WelcomeRestful{
 
     @RequestMapping(value = "")
     public String index() throws Exception{
-        return "Welcome to use the MS Framework!";
+        return "Welcome to use the Clown Framework!";
     }
 }

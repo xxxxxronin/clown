@@ -7,7 +7,7 @@ import java.io.IOException;
 
 /**
  * Created by len.li on 2016/4/21.
- * 支持跨域过滤器
+ * 支持跨域过滤器,不属于spring mvc 过滤器
  * 配置文件键值对如下
  * clown.cross.alloworigin=* clown.cross.allowheaders=Origin    clown.cross.allowmethods=GET,POST,OPTIONS  clown.cross.maxage=3628800
  */
