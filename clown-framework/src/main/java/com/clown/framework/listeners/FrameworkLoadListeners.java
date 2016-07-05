@@ -2,8 +2,8 @@ package com.clown.framework.listeners;
 
 import com.clown.framework.configurations.PropertiesConfiguration;
 import com.clown.framework.filters.CrossDomainFilter;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -18,7 +18,8 @@ import javax.servlet.ServletRegistration;
  */
 public class FrameworkLoadListeners implements ServletContextListener {
 
-    protected final Log logger = LogFactory.getLog(FrameworkLoadListeners.class);
+
+    protected final Logger logger = LoggerFactory.getLogger(FrameworkLoadListeners.class);
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
