@@ -1,9 +1,9 @@
 package com.clown.framework.core;
 
+import com.clown.framework.configurations.ClownPropertyPlaceholderConfigurer;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
@@ -34,7 +34,7 @@ public class ConfigPropertiesBeanDefinitionRegistry implements BeanDefinitionReg
         MutablePropertyValues mutablePropertyValues = new MutablePropertyValues();
         mutablePropertyValues.add("location","classpath:"+DEFUALT_PROPERTIES);
         GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
-        beanDefinition.setBeanClass(PropertyPlaceholderConfigurer.class);
+        beanDefinition.setBeanClass(ClownPropertyPlaceholderConfigurer.class);
         beanDefinition.setLazyInit(false);
         beanDefinition.setAbstract(false);
         beanDefinition.setAutowireCandidate(true);
@@ -42,6 +42,7 @@ public class ConfigPropertiesBeanDefinitionRegistry implements BeanDefinitionReg
         beanDefinition.setPropertyValues(mutablePropertyValues);
         registry.registerBeanDefinition("propertyConfigurer",beanDefinition);
 
+        // 注册自定义request mapping 处理器
         if(useCutomRequestMappingHandlerMapping){
             beanDefinition = new GenericBeanDefinition();
             beanDefinition.setBeanClass(CustomeRequestMappingHandlerMapping.class);
@@ -50,8 +51,6 @@ public class ConfigPropertiesBeanDefinitionRegistry implements BeanDefinitionReg
             beanDefinition.setAutowireCandidate(true);
             registry.registerBeanDefinition("org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping",beanDefinition);
         }
-
-
     }
 
     @Override

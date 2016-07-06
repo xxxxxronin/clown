@@ -25,7 +25,7 @@ public class FrameworkLoadListeners implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
 
         logger.info(PropertiesConfiguration.getMsDisconfScanpackage());
-        // spring characterEncodingFilter
+        // spring characterEncodingFilter 字符过滤UTF-8编码
         ServletContext servletContext = sce.getServletContext();
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
