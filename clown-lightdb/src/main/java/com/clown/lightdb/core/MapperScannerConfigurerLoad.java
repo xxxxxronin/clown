@@ -1,5 +1,6 @@
 package com.clown.lightdb.core;
 
+import com.clown.framework.configurations.ClownContextPropertiesConstant;
 import com.clown.framework.configurations.PropertiesConfiguration;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.beans.BeansException;
@@ -14,14 +15,19 @@ import org.springframework.beans.factory.support.GenericBeanDefinition;
  */
 public class MapperScannerConfigurerLoad implements BeanDefinitionRegistryPostProcessor {
 
-    private final static String CONFIGURATION_KEY = "ms.mybatis.basepackage";
+    private static final String defaultMybaitsPackage = "com.clown.*.dao";
 
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
-        String basepackage = PropertiesConfiguration.getMsMybatisBasepackage();
+        StringBuilder stringBuilder = new StringBuilder(defaultMybaitsPackage);
+        String basepackage = PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_MYBATIS_BASEPACKAGE,null);
+        if(basepackage!=null && basepackage.trim().length()>0){
+            stringBuilder.append(",");
+            stringBuilder.append(basepackage);
+        }
         MutablePropertyValues mutablePropertyValues = new MutablePropertyValues();
 
-        mutablePropertyValues.add("basePackage",basepackage);
+        mutablePropertyValues.add("basePackage",stringBuilder.toString());
         mutablePropertyValues.add("sqlSessionFactoryBeanName","sqlSessionFactory");
         GenericBeanDefinition genericBeanDefinition = new GenericBeanDefinition();
         genericBeanDefinition.setBeanClass(MapperScannerConfigurer.class);

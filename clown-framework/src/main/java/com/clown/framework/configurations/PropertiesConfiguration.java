@@ -27,64 +27,28 @@ public abstract class PropertiesConfiguration {
         }
     }
 
+
     /**
-     * mybaits 扫描包配置项
+     * 获得百度配置扫描包名
+     * @return
      */
-    private final static String MS_MYBATIS_BASEPACKAGE = "ms.mybatis.basepackage";
+    public static String getDisconfScanpackage(){
+        String value = properties.getProperty(ClownContextPropertiesConstant.CLOWN_DISCONF_SCANPACKAGE,"com.clown.code.config");
+        return value;
+    }
+
     /**
-     * 百度开源 disconf 扫描包配置项
+     * 是否开启跨域
+     * @return
      */
-    private final static String MS_DISCONF_SCANPACKAGE = "ms.disconf.scanpackage";
-    private final static String MS_APPLICATION_NAME = "ms.application.name";
-    private final static String MS_CROSS_DOMAIN = "ms.allow.crossdomain";
-    private final static String MS_CROSS_DOMAIN_URL = "ms.crossdomain.filtermapping";
-
-    private final static String MS_CROSS_ALLOWORIGIN = "clown.cross.alloworigin";
-    private final static String MS_CROSS_ALLOWHEADERS = "clown.cross.allowheaders";
-
-    private final static String MS_CROSS_ALLOWMETHODS = "clown.cross.allowmethods";
-    private final static String MS_CROSS_MAXAGE = "clown.cross.maxage";
-
-
-    public static String getMsMybatisBasepackage(){
-        return properties.getProperty(MS_MYBATIS_BASEPACKAGE);
+    public static boolean getCrossDomain(){
+        String value = properties.getProperty(ClownContextPropertiesConstant.CLOWN_ALLOW_CROSSDOMAIN,"false");
+        return value.toLowerCase().equals("true");
     }
 
-    public static String getMsDisconfScanpackage(){
-        return properties.getProperty(MS_MYBATIS_BASEPACKAGE);
+    public static String findPropertieValue(String key,String defaultValue){
+        return  properties.getProperty(key,defaultValue);
     }
-
-
-    public static String getMsApplicationName(){
-        return  properties.getProperty(MS_APPLICATION_NAME);
-    }
-
-
-    public static boolean getMsCrossDomain(){
-        return properties.getProperty(MS_CROSS_DOMAIN).toLowerCase().equals("true");
-    }
-
-    public static String getMsCrossDomainUrl(){
-        return properties.getProperty(MS_CROSS_DOMAIN_URL).toLowerCase();
-    }
-
-    public static String getMsCrossAlloworigin(){
-        return properties.getProperty(MS_CROSS_ALLOWORIGIN);
-    }
-
-    public static String getMsCrossAllowheaders(){
-        return properties.getProperty(MS_CROSS_ALLOWHEADERS);
-    }
-
-    public static String getMsCrossAllowmethods(){
-        return properties.getProperty(MS_CROSS_ALLOWMETHODS);
-    }
-    public static String getMsCrossMaxage(){
-        return properties.getProperty(MS_CROSS_MAXAGE);
-    }
-
-
-
 
 
 }

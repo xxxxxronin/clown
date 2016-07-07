@@ -7,9 +7,9 @@
     <tx:annotation-driven transaction-manager="transactionManager" />
     <!--配置druid数据源-->
     <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-    <property name="url" value="${ms.db.url}"></property>
-    <property name="username" value="${ms.db.username}"></property>
-    <property name="password" value="${ms.db.password}" />
+    <property name="url" value="${clown.db.url}"></property>
+    <property name="username" value="${clown.db.username}"></property>
+    <property name="password" value="${clown.db.password}" />
     <property name="initialSize" value="1"/>
     <property name="maxActive" value="20"/>
     </bean>

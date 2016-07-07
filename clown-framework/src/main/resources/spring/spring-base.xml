@@ -27,7 +27,7 @@
     <!--启用默认servlet用于处理静态资源访问-->
     <mvc:default-servlet-handler/>
     <!--处理静态资源访问-->
-    <mvc:resources mapping="/static/**" location="/static/" />
+    <mvc:resources mapping="/static/**" location="${clown.resources.dir}" />
 
     <bean id="configPropertiesBeanDefinitionRegistry" class="com.clown.framework.core.ConfigPropertiesBeanDefinitionRegistry">
         <property name="useCutomRequestMappingHandlerMapping" value="true"></property>
@@ -51,7 +51,7 @@
 
     <!--FreeMarker整合Spring-->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-        <property name="templateLoaderPaths" value="/template/" />
+        <property name="templateLoaderPaths" value="${clown.template.dir}" />
         <property name="preferFileSystemAccess" value="false" />
         <property name="freemarkerVariables">
             <map>
@@ -83,29 +83,19 @@
     </bean>
 
     <bean id="exceptionHandler" class="com.clown.framework.exceptions.DefaultHandlerExceptionResolver">
-        <property name="errorPage" value="${ms.error.page}"/>
+        <property name="errorPage" value="${clown.error.page}"/>
     </bean>
 
   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
-    <!--添加json参数绑定-->
 
-    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
-        <!--&lt;!&ndash;线程安全的访问session&ndash;&gt;-->
-        <!--<property name="synchronizeOnSession" value="true"/>-->
-        <!--<property name="customArgumentResolvers">-->
-            <!--<list>-->
-                <!--<bean class="com.diandiandi.framework.resolvers.RequestJsonBody"></bean>-->
-            <!--</list>-->
-        <!--</property>-->
+
+
+    <!--<bean id="messageSource"-->
+          <!--class="org.springframework.context.support.ResourceBundleMessageSource">-->
+        <!--<property name="basename" value="i18n.message"></property>-->
+        <!--<property name="defaultEncoding" value="utf-8"/>-->
     <!--</bean>-->
-
-
-    <bean id="messageSource"
-          class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="i18n.message"></property>
-        <property name="defaultEncoding" value="utf-8"/>
-    </bean>
 
 	
 </beans>

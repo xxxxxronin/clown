@@ -19,7 +19,7 @@ public class DefaultDisconfMgrBean extends DisconfMgrBean {
 
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
-        String scanPackage = PropertiesConfiguration.getMsDisconfScanpackage();
+        String scanPackage = PropertiesConfiguration.getDisconfScanpackage();
         setScanPackage(String.format("%s,%s","com.clown.framework.configurations",scanPackage));
         super.postProcessBeanDefinitionRegistry(registry);
 

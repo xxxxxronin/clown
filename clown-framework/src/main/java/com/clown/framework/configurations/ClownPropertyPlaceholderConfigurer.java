@@ -5,6 +5,7 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 
 import java.io.File;
+import java.util.Properties;
 
 /**
  * Created by lenli on 2016/7/6.
@@ -14,7 +15,19 @@ import java.io.File;
  */
 public class ClownPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer {
 
-    private static final String CLOWN_CONFIG_DIR = "clown.config.dir";
+
+
+
+    public ClownPropertyPlaceholderConfigurer() {
+        Properties properties = new Properties();
+        properties.setProperty(ClownContextPropertiesConstant.CLOWN_TEMPLATE_DIR,"/template/");
+        properties.setProperty(ClownContextPropertiesConstant.CLOWN_RESOURCES_PATH,"/static/");
+        properties.setProperty(ClownContextPropertiesConstant.CLOWN_ALLOW_CROSSDOMAIN,"false");
+        properties.setProperty(ClownContextPropertiesConstant.CLOWN_CROSSDOMAIN_FILTERMAPPING,"/restful/*");
+        properties.setProperty(ClownContextPropertiesConstant.CLOWN_APPLICATION_NAME,"welcome use clow framework!");
+        properties.setProperty(ClownContextPropertiesConstant.CLOWN_ERROR_PAGE,"/404");
+        setProperties(properties);
+    }
 
     @Override
     public void setLocation(Resource location) {
@@ -31,7 +44,10 @@ public class ClownPropertyPlaceholderConfigurer extends PropertyPlaceholderConfi
     }
 
     private Resource findResource(Resource resource){
-        String dir = System.getProperty(CLOWN_CONFIG_DIR);
+        String dir = System.getProperty(ClownContextPropertiesConstant.CLOWN_CONFIG_DIR);
+        if(dir == null){
+            return resource;
+        }
         File dirF = new File(dir);
         if(dirF.exists() && dirF.isDirectory()){
             logger.info(String.format("加载配置文件位置:%s",dir));
