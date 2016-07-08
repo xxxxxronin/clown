@@ -16,5 +16,6 @@ public interface DataBaseInfoDao {
 
     public List<TableInfoModel> findAllTableNames(@Param("dbName") String dbname) throws Exception;
 
+
     public List<ColumnInfoModel> findColumnInfo(@Param("dbName") String dbName,@Param("tableName") String tableName) throws Exception;
 }

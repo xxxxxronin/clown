@@ -11,6 +11,7 @@ public class ColumnInfoModel {
     private String columnName;
     private String dataType;
     private String columnComment;
+    private String columnModelName;
 
 
     public String getColumnName() {
@@ -35,5 +36,13 @@ public class ColumnInfoModel {
 
     public void setColumnComment(String columnComment) {
         this.columnComment = columnComment;
+    }
+
+    public String getColumnModelName() {
+        return columnModelName;
+    }
+
+    public void setColumnModelName(String columnModelName) {
+        this.columnModelName = columnModelName;
     }
 }

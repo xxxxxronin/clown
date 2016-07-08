@@ -74,4 +74,17 @@ public class CodeController {
     }
 
 
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/build/mapper/{dbname}")
+    @ResponseBody
+    public DefaultAjaxResult buildMapper(@PathVariable("dbname")String dbName) throws Exception{
+        DefaultAjaxResult defaultAjaxResult = new DefaultAjaxResult();
+        return defaultAjaxResult;
+    }
+
+
 }
