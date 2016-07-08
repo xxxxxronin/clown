@@ -20,6 +20,7 @@ public class DefaultHandlerExceptionResolver extends AbstractHandlerExceptionRes
 
     private String errorPage = "redirect:/error";
 
+
     public DefaultHandlerExceptionResolver() {
         // 将异常处理类优先级提到最高
         setOrder(1);
@@ -88,6 +89,7 @@ public class DefaultHandlerExceptionResolver extends AbstractHandlerExceptionRes
      */
     @Override
     protected ModelAndView doResolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
+
 
         if(isAjaxRequest(request)){
             ObjectMapper objectMapper = new ObjectMapper();

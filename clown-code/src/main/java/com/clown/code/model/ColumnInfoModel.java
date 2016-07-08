@@ -12,6 +12,7 @@ public class ColumnInfoModel {
     private String dataType;
     private String columnComment;
 
+
     public String getColumnName() {
         return columnName;
     }

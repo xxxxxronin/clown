@@ -5,8 +5,8 @@
     <!--*****************************************-->
     <!--获得数据库所有字段-->
     <!--*****************************************-->
-    <select id="findAllTableNames" resultType="java.lang.String">
-        select table_name as tableName,TABLE_COMMENT as tableComment from information_schema.tables where table_schema=#{dbName} and table_type='base table';
+    <select id="findAllTableNames" resultType="com.clown.code.model.TableInfoModel">
+        select `table_name` as tableName,TABLE_COMMENT as tableComment from information_schema.tables where table_schema=#{dbName} and table_type='base table';
     </select>
 
     <!--*************************************-->
