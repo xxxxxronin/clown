@@ -59,7 +59,7 @@ public class CodeController {
             List<String> dataType = new ArrayList<String>();
             List<ColumnInfoModel> columnInfoModelList = dataBaseInfoService.findColumnInfo(dbName,tableInfoModel.getTableName());
             for (ColumnInfoModel columnInfoModel : columnInfoModelList){
-                columnInfoModel.setColumnName(ConvertUtil.converName("f_",columnInfoModel.getColumnName()," "));
+                columnInfoModel.setColumnModelName(ConvertUtil.converName("f_",columnInfoModel.getColumnName()," "));
                 if(columnInfoModel.getDataType().equals("date") || columnInfoModel.getDataType().equals("datetime")){
                     if(!dataType.contains(columnInfoModel.getDataType())){
                         dataType.add(columnInfoModel.getDataType());
@@ -70,11 +70,29 @@ public class CodeController {
             commonModel.setColType(dataType);
             commonModel.setTable(tableInfoModel);
 
-            FreemarkerUtil.createFile("build/model.ftl",commonModel,ConvertUtil.converModelPath(
+            FreemarkerUtil.createFile("build/model.ftl",commonModel,
+                    ConvertUtil.converModelPath(
                     commonModel.getConfig().getDirPath(),
                     commonModel.getConfig().getPackageNameModel(),
                     commonModel.getTable().getTableModelName(),
-                    commonModel.getConfig().getModelSuffix(),"java"));
+                    commonModel.getConfig().getModelSuffix(),"java")
+            );
+
+            FreemarkerUtil.createFile("build/dao.ftl",commonModel,
+                    ConvertUtil.converModelPath(
+                            commonModel.getConfig().getDirPath(),
+                            commonModel.getConfig().getPackageNameDao(),
+                            commonModel.getTable().getTableModelName(),
+                            commonModel.getConfig().getDaoSuffix(),"java")
+            );
+
+            FreemarkerUtil.createFile("build/mapper.ftl",commonModel,
+                    ConvertUtil.converModelPath(
+                            commonModel.getConfig().getDirPath(),
+                            commonModel.getConfig().getPackageNameDao(),
+                            commonModel.getTable().getTableModelName(),
+                            commonModel.getConfig().getDaoSuffix(),"xml")
+            );
         }
         return defaultAjaxResult;
     }

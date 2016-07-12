@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE ${"mapper"} PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="${config.packageNameDao}.${table.tableModelName?cap_first}${config.daoSuffix}">
-    <#assign columnListSize="${cols?size}"/>
     <!--*****************************************-->
     <!--获得${table.tableName?cap_first}所有字段-->
     <!--*****************************************-->
     <select id="find${table.tableModelName?cap_first}List" resultType="${config.packageNameModel}.${table.tableModelName?cap_first}Model">
         SELECT
             <#list cols as item>
-                ${item.columnName} as ${item.columnModelName} <#if item_index<(columnListSize-1)>,</#if>
+
+                ${item.columnName} as ${item.columnModelName} <#if item_has_next>,</#if>
             </#list>
         FROM ${table.tableName}  WHERE 1=1
     </select>
@@ -19,7 +19,7 @@
     <select id="find${table.tableModelName?cap_first}One" resultType="${config.packageNameModel}.${table.tableModelName?cap_first}Model">
         SELECT
             <#list cols as item>
-            ${item.columnName} as ${item.columnModelName} <#if item_index<(columnListSize-1)>,</#if>
+            ${item.columnName} as ${item.columnModelName} <#if item_has_next >,</#if>
             </#list>
         FROM ${table.tableName}  WHERE 1=1 LIMIT 1;
     </select>
@@ -58,11 +58,11 @@
     <insert id="insert${table.tableModelName?cap_first}One" parameterType="${config.packageNameModel}.${table.tableModelName?cap_first}Model">
         INSERT INTO ${table.tableName} (
             <#list cols as item>
-                `${item.columnName}` <#if item_index<(columnListSize-1)>,</#if>
+                `${item.columnName}` <#if item_has_next>,</#if>
             </#list>
         ) VALUES (
             <#list cols as item>
-                ${"#"}{query.${item.columnModelName}} <#if item_index<(columnListSize-1)>,</#if>
+                ${"#"}{query.${item.columnModelName}} <#if item_has_next>,</#if>
             </#list>
         );
     </insert>

@@ -30,28 +30,30 @@ public class FreemarkerUtil {
      */
     public static boolean createFile(String templatePath,Object params,String targetFile){
         FreeMarkerConfigurer freeMarkerConfigurer = (FreeMarkerConfigurer) ApplicationContextUtil.getBean(FreeMarkerConfigurer.class);
+        OutputStreamWriter outputStreamWriter = null;
+        FileOutputStream fileOutputStream = null;
+        Writer out = null;
         try {
             Template template = freeMarkerConfigurer.getConfiguration().getTemplate(templatePath);
-            FileOutputStream fileOutputStream = new FileOutputStream(targetFile);
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream,"UTF-8");
-            Writer out = new BufferedWriter(outputStreamWriter);
+             fileOutputStream = new FileOutputStream(targetFile);
+            outputStreamWriter = new OutputStreamWriter(fileOutputStream,"UTF-8");
+             out = new BufferedWriter(outputStreamWriter);
             template.process(params,out);
-
             out.flush();
 
             fileOutputStream.close();
             outputStreamWriter.close();
             out.close();
-
-
             logger.info("创建文件成功:{}",targetFile);
             return true;
         } catch (IOException e) {
             logger.info("FreemarkerUtil::createFile",e);
+
         }
         catch (TemplateException e){
             logger.info("FreemarkerUtil::createFile",e);
         }
+
         return false;
     }
 

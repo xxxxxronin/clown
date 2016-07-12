@@ -1,7 +1,7 @@
 package ${config.packageNameDao};
 
-import ${config.packageNameModel}.${tableModelName?cap_first}Model;
-import ${config.packageNameModel}.${tableModelName?cap_first}Model;
+import ${config.packageNameModel}.${table.tableModelName?cap_first}Model;
+import ${config.packageNameModel}.${table.tableModelName?cap_first}Model;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 /**
