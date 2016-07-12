@@ -1,25 +1,25 @@
-package ${packageName}.dao;
+package ${config.packageNameDao};
 
-import ${packageName}.model.${tableModelName?cap_first}Model;
-import ${packageName}.model.${tableModelName?cap_first}Model;
+import ${config.packageNameModel}.${tableModelName?cap_first}Model;
+import ${config.packageNameModel}.${tableModelName?cap_first}Model;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 /**
-* Created by ${author?default("AutoClownCode")} on 2016/7/4.
+* Created by ${config.authorName} on 2016/7/4.
 *
-* @Author ${author?default("AutoClownCode")}
+* @Author ${config.authorName}
 * @Date 2016/7/4
 */
-public interface ${tableModelName?cap_first}Dao {
+public interface ${table.tableModelName?cap_first}Dao {
 
-    public List<${tableModelName?cap_first}> find${tableModelName?cap_first}List(@Param("query") ${tableModelName?cap_first}Model ${tableModelName}Model) throws Exception;
+    public List<${table.tableModelName?cap_first}> find${table.tableModelName?cap_first}List(@Param("query") ${table.tableModelName?cap_first}Model ${table.tableModelName}Model) throws Exception;
 
-    public ${tableModelName?cap_first}Model find${tableModelName?cap_first}One(@Param("query") ${tableModelName?cap_first}Model ${tableModelName}Model) throws Exception;
+    public ${table.tableModelName?cap_first}Model find${table.tableModelName?cap_first}One(@Param("query") ${table.tableModelName?cap_first}Model ${table.tableModelName}Model) throws Exception;
 
-    public int delete${tableModelName?cap_first}Batch(List<Integer> iids) throws Exception;
+    public int delete${table.tableModelName?cap_first}Batch(List<Integer> iids) throws Exception;
 
-    public int update${tableModelName?cap_first}One(@Param("query") ${tableModelName?cap_first}Model ${tableModelName}Model) throws Exception;
+    public int update${table.tableModelName?cap_first}One(@Param("query") ${table.tableModelName?cap_first}Model ${table.tableModelName}Model) throws Exception;
 
-    public int insert${tableModelName?cap_first}One(@Param("query") ${tableModelName?cap_first}Model ${tableModelName}Model) throws Exception;
+    public int insert${table.tableModelName?cap_first}One(@Param("query") ${table.tableModelName?cap_first}Model ${table.tableModelName}Model) throws Exception;
 
 }

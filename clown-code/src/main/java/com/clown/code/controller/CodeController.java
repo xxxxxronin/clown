@@ -1,6 +1,8 @@
 package com.clown.code.controller;
 
+import com.clown.code.common.BaseConfig;
 import com.clown.code.model.ColumnInfoModel;
+import com.clown.code.model.CommonModel;
 import com.clown.code.model.TableInfoModel;
 import com.clown.code.service.DataBaseInfoService;
 import com.clown.code.utils.ConvertUtil;
@@ -15,9 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by lenli on 2016/7/4.
@@ -48,12 +48,14 @@ public class CodeController {
     @ResponseBody
     public DefaultAjaxResult buildModels(@PathVariable("dbname")String dbName) throws Exception{
         DefaultAjaxResult defaultAjaxResult = new DefaultAjaxResult();
-        List<TableInfoModel> tableInfoModelList = dataBaseInfoService.findAllTableNames(dbName);
-        String dirPath = "e:\\vm\\%sModel.%s";
-        Map<String,Object> params;
-        for (TableInfoModel tableInfoModel : tableInfoModelList){
+        BaseConfig baseConfig = new BaseConfig();
+        baseConfig.setUseDbName(dbName);
+        baseConfig.setDirPath("e:\\vm\\");
+        CommonModel commonModel = dataBaseInfoService.getBaseConfig(baseConfig);
+        for (TableInfoModel tableInfoModel : commonModel.getTableList()){
             String tableName = ConvertUtil.converName("tsys_",tableInfoModel.getTableName()," ");
-            params = new HashMap<String, Object>();
+            tableInfoModel.setTableModelName(tableName);
+
             List<String> dataType = new ArrayList<String>();
             List<ColumnInfoModel> columnInfoModelList = dataBaseInfoService.findColumnInfo(dbName,tableInfoModel.getTableName());
             for (ColumnInfoModel columnInfoModel : columnInfoModelList){
@@ -64,11 +66,15 @@ public class CodeController {
                     }
                 }
             }
-            params.put("list",columnInfoModelList);
-            params.put("tableName",tableName);
-            params.put("dataType",dataType);
-            params.put("packageName","com.clown.code.model");
-            FreemarkerUtil.createFile("build/model.ftl",params,String.format(dirPath,ConvertUtil.firstCap(tableName),"java"));
+            commonModel.setCols(columnInfoModelList);
+            commonModel.setColType(dataType);
+            commonModel.setTable(tableInfoModel);
+
+            FreemarkerUtil.createFile("build/model.ftl",commonModel,ConvertUtil.converModelPath(
+                    commonModel.getConfig().getDirPath(),
+                    commonModel.getConfig().getPackageNameModel(),
+                    commonModel.getTable().getTableModelName(),
+                    commonModel.getConfig().getModelSuffix(),"java"));
         }
         return defaultAjaxResult;
     }

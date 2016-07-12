@@ -1,6 +1,8 @@
 package com.clown.code.service;
 
+import com.clown.code.common.BaseConfig;
 import com.clown.code.model.ColumnInfoModel;
+import com.clown.code.model.CommonModel;
 import com.clown.code.model.TableInfoModel;
 
 import java.util.List;
@@ -16,6 +18,8 @@ public interface DataBaseInfoService {
     public List<TableInfoModel> findAllTableNames( String dbname) throws Exception;
 
     public List<ColumnInfoModel> findColumnInfo(String dbName, String tableName) throws Exception;
+
+    public CommonModel getBaseConfig(BaseConfig config) throws Exception;
 
 
 }

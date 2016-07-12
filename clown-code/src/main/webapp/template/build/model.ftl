@@ -1,18 +1,19 @@
-package ${packageName};
-<#list dataType as row>
+package ${config.packageNameModel};
+<#list colType as row>
     <#if row == "datetime">
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;
     </#if>
 </#list>
 /**
-* Created by lenli on 2016/7/4.
+* Created by ${config.authorName} on 2016/7/4.
 *
-* @Author Libin
+* @Author ${config.authorName}
 * @Date 2016/7/4
 */
-public class ${tableName?cap_first}Model {
-<#list list as col>
+public class ${table.tableModelName?cap_first}Model {
+
+<#list cols as col>
 <#if col.dataType=="varchar">private String ${col.columnName}; //${col.columnComment}</#if>
 <#if col.dataType=="date" || col.dataType=="datetime">
 @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
@@ -22,7 +23,7 @@ private Date ${col.columnName}; //${col.columnComment}
 </#list>
 
 
-<#list list as item>
+<#list cols as item>
 <#assign colType ="String" />
     <#if item.dataType=="date" || item.dataType=="datetime">
         <#assign colType="Date" />

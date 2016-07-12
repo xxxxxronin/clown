@@ -10,6 +10,7 @@ public class TableInfoModel {
 
     private String tableName;
     private String tableComment;
+    private String tableModelName;
 
     public String getTableName() {
         return tableName;
@@ -25,5 +26,13 @@ public class TableInfoModel {
 
     public void setTableComment(String tableComment) {
         this.tableComment = tableComment;
+    }
+
+    public String getTableModelName() {
+        return tableModelName;
+    }
+
+    public void setTableModelName(String tableModelName) {
+        this.tableModelName = tableModelName;
     }
 }
