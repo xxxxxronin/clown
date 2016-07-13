@@ -7,6 +7,7 @@ import com.clown.code.model.CommonModel;
 import com.clown.code.model.TableInfoModel;
 import com.clown.code.service.DataBaseInfoService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
@@ -24,6 +25,7 @@ public class DataBaseInfoServiceImpl implements DataBaseInfoService {
     @Resource
     private DataBaseInfoDao dataBaseInfoDao;
 
+    @Transactional
     public List<TableInfoModel> findAllTableNames(String dbname) throws Exception {
         List<TableInfoModel> tableInfoModelList = dataBaseInfoDao.findAllTableNames(dbname);
         return tableInfoModelList;

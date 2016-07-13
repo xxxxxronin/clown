@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 /**
 * Created by ${config.authorName} on 2016/7/4.
-*
 * @Author ${config.authorName}
 * @Date 2016/7/4
 */

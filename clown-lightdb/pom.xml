@@ -61,6 +61,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>0.2.26</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
