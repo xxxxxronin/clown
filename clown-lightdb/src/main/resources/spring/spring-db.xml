@@ -20,7 +20,7 @@
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="druidDataSource" />
     </bean>
-    <tx:annotation-driven transaction-manager="transactionManager"  />
+
     <!-- 事务管理 通知 -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
@@ -46,8 +46,8 @@
     </bean>
 
     <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-    <!--<property name="basePackage" value="${clown.mybatis.basepackage}" />-->
-    <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
+        <!--<property name="basePackage" value="com.clown.*.dao" />-->
+        <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
     <!--</bean>-->
 
     <bean class="com.clown.lightdb.core.MapperScannerConfigurerLoad" id="mapperScannerConfigurerLoad"></bean>
@@ -55,5 +55,13 @@
     <bean class="com.clown.lightdb.utils.SqlSessionFactoryUtil" name="sqlSessionFactoryUtil" init-method="init">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- 事务 aop 配置如果没有以下配置事务不会启动 -->
+    <aop:config>
+        <aop:pointcut id="serviceMethods" expression="execution(* com.clown.*.service..*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>
+    </aop:config>
 
 </beans>
