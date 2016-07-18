@@ -40,7 +40,7 @@ public class FrameworkLoadListeners implements ServletContextListener {
                     PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_CROSS_ALLOWHEADERS,"Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With"),
                     PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_CROSS_ALLOWMETHODS,"GET,POST,OPTIONS"),
                     PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_CROSS_MAXAGE,"3628800"))).addMappingForUrlPatterns(null,false,
-                    PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_CROSSDOMAIN_FILTERMAPPING,"/restful/**"));
+                    PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_CROSSDOMAIN_FILTERMAPPING,"/api/**"));
         }
 
         // 启用spring mvc 执行

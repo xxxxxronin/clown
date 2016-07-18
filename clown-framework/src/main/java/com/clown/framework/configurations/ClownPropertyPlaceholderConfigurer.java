@@ -1,10 +1,13 @@
 package com.clown.framework.configurations;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Properties;
 
 /**
@@ -15,15 +18,32 @@ import java.util.Properties;
  */
 public class ClownPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer {
 
+    private static final Logger logger = LoggerFactory.getLogger(ClownPropertyPlaceholderConfigurer.class);
 
 
+    private static  Properties  allproperties;
+
+    public static Object getValue(String key){
+        if(allproperties == null){
+            logger.info("config.preperty not loading");
+            return null;
+        }
+        return allproperties.getProperty(key);
+    }
+
+    @Override
+    protected Properties mergeProperties() throws IOException {
+        Properties properties = super.mergeProperties();
+        allproperties  = properties;
+        return properties;
+    }
 
     public ClownPropertyPlaceholderConfigurer() {
         Properties properties = new Properties();
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_TEMPLATE_DIR,"/template/");
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_RESOURCES_PATH,"/static/");
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_ALLOW_CROSSDOMAIN,"false");
-        properties.setProperty(ClownContextPropertiesConstant.CLOWN_CROSSDOMAIN_FILTERMAPPING,"/restful/*");
+        properties.setProperty(ClownContextPropertiesConstant.CLOWN_CROSSDOMAIN_FILTERMAPPING,"/api/*");
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_APPLICATION_NAME,"welcome use clow framework!");
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_ERROR_PAGE,"/404");
         setProperties(properties);

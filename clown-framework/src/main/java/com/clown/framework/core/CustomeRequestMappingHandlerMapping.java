@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 public class CustomeRequestMappingHandlerMapping extends RequestMappingHandlerMapping {
 
     private boolean isRestful = false;
-    private final static String RESTFUL_PREFIX = "/restful";
+    private final static String RESTFUL_PREFIX = "/api";
 
     @Override
     protected RequestMappingInfo getMappingForMethod(Method method, Class<?> handlerType) {
