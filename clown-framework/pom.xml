@@ -26,6 +26,7 @@
         <com.google.zxing.core.version>2.0</com.google.zxing.core.version>
         <net.glxn.qrgen.version>1.4</net.glxn.qrgen.version>
         <com.google.zxing.javase.version>2.0</com.google.zxing.javase.version>
+        <apache.shiro.version>1.2.3</apache.shiro.version>
     </properties>
 
 
@@ -181,6 +182,27 @@
             <artifactId>validation-api</artifactId>
             <version>1.1.0.Final</version>
         </dependency>
+
+        <!--Apache Shiro 依懒包-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${apache.shiro.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>${apache.shiro.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${apache.shiro.version}</version>
+        </dependency>
+
+
 
     </dependencies>
 
