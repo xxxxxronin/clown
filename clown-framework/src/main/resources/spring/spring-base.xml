@@ -34,8 +34,8 @@
     </bean>
     <aop:aspectj-autoproxy proxy-target-class="true"/>
     <!-- 使用disconf必须添加以下配置 -->
-    <bean id="disconfMgrBean" class="com.clown.framework.core.DefaultDisconfMgrBean" destroy-method="destroy"></bean>
-    <bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond" init-method="init" destroy-method="destroy"></bean>
+    <!--<bean id="disconfMgrBean" class="com.clown.framework.core.DefaultDisconfMgrBean" destroy-method="destroy"></bean>-->
+    <!--<bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond" init-method="init" destroy-method="destroy"></bean>-->
 
     <bean id="applicationContextUtil" class="com.clown.framework.core.ApplicationContextUtil" ></bean>
 

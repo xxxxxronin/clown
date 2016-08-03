@@ -1,2 +1,0 @@
-# clown
-clown framework
