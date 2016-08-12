@@ -27,15 +27,21 @@
     <!--启用默认servlet用于处理静态资源访问-->
     <mvc:default-servlet-handler/>
     <!--处理静态资源访问-->
-    <mvc:resources mapping="/static/**" location="${clown.resources.dir}" />
+    <mvc:resources mapping="/static/**" location="/static/" />
 
+    <!--加载配置文件-->
     <bean id="configPropertiesBeanDefinitionRegistry" class="com.clown.framework.core.ConfigPropertiesBeanDefinitionRegistry">
         <property name="useCutomRequestMappingHandlerMapping" value="true"></property>
     </bean>
+
     <aop:aspectj-autoproxy proxy-target-class="true"/>
     <!-- 使用disconf必须添加以下配置 -->
-    <!--<bean id="disconfMgrBean" class="com.clown.framework.core.DefaultDisconfMgrBean" destroy-method="destroy"></bean>-->
-    <!--<bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond" init-method="init" destroy-method="destroy"></bean>-->
+    <bean id="disconfMgrBean" class="com.clown.framework.core.DefaultDisconfMgrBean"
+          destroy-method="destroy">
+    </bean>
+    <bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond"
+          init-method="init" destroy-method="destroy">
+    </bean>
 
     <bean id="applicationContextUtil" class="com.clown.framework.core.ApplicationContextUtil" ></bean>
 
@@ -43,7 +49,14 @@
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <property name="messageConverters">
             <list>
-                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                            <value>application/json;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
             </list>
         </property>
     </bean>
@@ -51,7 +64,7 @@
 
     <!--FreeMarker整合Spring-->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-        <property name="templateLoaderPaths" value="${clown.template.dir}" />
+        <property name="templateLoaderPaths" value="/template/" />
         <property name="preferFileSystemAccess" value="false" />
         <property name="freemarkerVariables">
             <map>
@@ -67,7 +80,8 @@
                 <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
                 <prop key="date_format">yyyy-MM-dd</prop>
                 <prop key="number_format">#.##</prop>
-                <prop key="auto_import"></prop>
+                <prop key="auto_import">${ms.import.template}</prop>
+                
             </props>
         </property>
     </bean>
@@ -79,23 +93,34 @@
         <property name="exposeSpringMacroHelpers" value="true" />
         <property name="exposeRequestAttributes" value="true" />
         <property name="exposeSessionAttributes" value="true" />
+        <property name="requestContextAttribute" value="request"></property>
         <property name="contentType" value="text/html;charset=utf-8"/>
     </bean>
 
     <bean id="exceptionHandler" class="com.clown.framework.exceptions.DefaultHandlerExceptionResolver">
-        <property name="errorPage" value="${clown.error.page}"/>
+        <property name="errorPage" value="${ms.error.page}"/>
     </bean>
 
   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
+    <!--添加json参数绑定-->
 
-
-
-    <!--<bean id="messageSource"-->
-          <!--class="org.springframework.context.support.ResourceBundleMessageSource">-->
-        <!--<property name="basename" value="i18n.message"></property>-->
-        <!--<property name="defaultEncoding" value="utf-8"/>-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+        <!--&lt;!&ndash;线程安全的访问session&ndash;&gt;-->
+        <!--<property name="synchronizeOnSession" value="true"/>-->
+        <!--<property name="customArgumentResolvers">-->
+            <!--<list>-->
+                <!--<bean class="com.diandiandi.framework.resolvers.RequestJsonBody"></bean>-->
+            <!--</list>-->
+        <!--</property>-->
     <!--</bean>-->
+
+
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="i18n.message"></property>
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
 
 	
 </beans>

@@ -21,12 +21,15 @@ public class CustomeRequestMappingHandlerMapping extends RequestMappingHandlerMa
     protected RequestMappingInfo getMappingForMethod(Method method, Class<?> handlerType) {
         isRestful = RestFulControllerInter.class.isAssignableFrom(handlerType);
         RequestMapping requestMapping = handlerType.getAnnotation(RequestMapping.class);
+
         RequestMappingInfo root;
         RequestMappingInfo requestMappingInfo= super.getMappingForMethod(method, handlerType);
+
 
         if(isRestful && requestMapping!=null && requestMappingInfo!=null){
             PatternsRequestCondition patterns = new PatternsRequestCondition(RESTFUL_PREFIX);
             RequestMethodsRequestCondition methods = requestMappingInfo.getMethodsCondition();
+
             ParamsRequestCondition params =requestMappingInfo.getParamsCondition();
             HeadersRequestCondition headers = requestMappingInfo.getHeadersCondition();
             ConsumesRequestCondition consumes = requestMappingInfo.getConsumesCondition();

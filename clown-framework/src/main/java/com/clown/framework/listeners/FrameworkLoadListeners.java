@@ -6,7 +6,6 @@ import com.clown.framework.filters.CrossDomainFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.filter.CharacterEncodingFilter;
-import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
@@ -55,9 +54,9 @@ public class FrameworkLoadListeners implements ServletContextListener {
         servletRegistration.addMapping("/");
 
         //添加shiro过滤操作
-        DelegatingFilterProxy delegatingFilterProxy = new DelegatingFilterProxy();
-        delegatingFilterProxy.setTargetFilterLifecycle(true);
-        servletContext.addFilter("shiroFilter",delegatingFilterProxy).addMappingForUrlPatterns(null,false,"/*");
+//        DelegatingFilterProxy delegatingFilterProxy = new DelegatingFilterProxy();
+//        delegatingFilterProxy.setTargetFilterLifecycle(true);
+//        servletContext.addFilter("shiroFilter",delegatingFilterProxy).addMappingForUrlPatterns(null,false,"/*");
 
 
     }

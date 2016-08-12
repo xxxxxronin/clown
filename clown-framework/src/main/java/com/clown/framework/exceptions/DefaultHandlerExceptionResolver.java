@@ -5,6 +5,7 @@ import com.clown.framework.DefaultAjaxResult;
 import com.clown.framework.DefaultRequestCode;
 import com.clown.framework.utils.ExceptionUtil;
 import com.clown.framework.utils.JsonUtil;
+import org.slf4j.Logger;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver;
 
@@ -90,7 +91,7 @@ public class DefaultHandlerExceptionResolver extends AbstractHandlerExceptionRes
     @Override
     protected ModelAndView doResolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
 
-
+        ex.printStackTrace();
         if(isAjaxRequest(request)){
             ObjectMapper objectMapper = new ObjectMapper();
             DefaultAjaxResult defaultAjaxResult = new DefaultAjaxResult();

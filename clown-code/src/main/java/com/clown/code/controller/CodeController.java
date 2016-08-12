@@ -50,7 +50,7 @@ public class CodeController {
         DefaultAjaxResult defaultAjaxResult = new DefaultAjaxResult();
         BaseConfig baseConfig = new BaseConfig();
         baseConfig.setUseDbName(dbName);
-        baseConfig.setDirPath("e:\\vm\\");
+        baseConfig.setDirPath("/home/lenli/documents/");
         CommonModel commonModel = dataBaseInfoService.getBaseConfig(baseConfig);
         for (TableInfoModel tableInfoModel : commonModel.getTableList()){
             String tableName = ConvertUtil.converName("tsys_",tableInfoModel.getTableName()," ");
