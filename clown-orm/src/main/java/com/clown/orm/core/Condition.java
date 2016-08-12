@@ -6,10 +6,11 @@ package com.clown.orm.core;
 public class Condition {
 
     public static final String Eq="=";
-    public static final String Gl=">";
-    public static final String Gle=">=";
-    public static final String Tl="<";
-    public static final String Tle="<=";
+    public static final String neq="&lt;&gt;";
+    public static final String Gl="&gt;";
+    public static final String Gle="&gt;=";
+    public static final String Tl="&lt;";
+    public static final String Tle="&lt;=";
 
     private boolean required = false;
     /**

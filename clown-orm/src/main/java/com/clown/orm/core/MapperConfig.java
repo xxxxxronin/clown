@@ -41,6 +41,8 @@ public class MapperConfig {
      */
     private List<Condition> conditionList = new ArrayList<Condition>();
 
+
+
     /**
      * 查询字段
      */
