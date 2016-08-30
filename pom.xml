@@ -10,7 +10,8 @@
     <packaging>pom</packaging>
 	<modules>
 		<module>clown-framework</module>
-		<module>clown-lightdb</module>
+		<module>clown-orm</module>
+        <module>clown-code</module>
 	</modules>
     <build>
         <plugins>

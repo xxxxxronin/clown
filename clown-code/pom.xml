@@ -17,8 +17,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.clown.lightdb</groupId>
-            <artifactId>clown-lightdb</artifactId>
+            <groupId>com.clown.orm</groupId>
+            <artifactId>clown-orm</artifactId>
             <version>1.2-SNAPSHOT</version>
         </dependency>
 

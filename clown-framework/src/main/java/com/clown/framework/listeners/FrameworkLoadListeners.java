@@ -25,9 +25,16 @@ public class FrameworkLoadListeners implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
+
         logger.info(PropertiesConfiguration.getDisconfScanpackage());
-        // spring characterEncodingFilter 字符过滤UTF-8编码
+
         ServletContext servletContext = sce.getServletContext();
+
+        // 添加spring 上下文监听
+//        servletContext.setInitParameter("contextConfigLocation","classpath*:spring/spring-*.xml");
+//        servletContext.addListener(new ContextLoaderListener());
+
+        // spring characterEncodingFilter 字符过滤UTF-8编码
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
         characterEncodingFilter.setForceEncoding(true);
@@ -43,11 +50,12 @@ public class FrameworkLoadListeners implements ServletContextListener {
                     PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_CROSSDOMAIN_FILTERMAPPING,"/api/**"));
         }
 
+
         // 启用spring mvc 执行
         logger.info("start spring mvc");
         DispatcherServlet dispatcherServlet = new DispatcherServlet();
         dispatcherServlet.setThrowExceptionIfNoHandlerFound(false);
-        dispatcherServlet.setContextConfigLocation("classpath*:spring/spring-*.xml");
+        dispatcherServlet.setContextConfigLocation("classpath*:spring/springweb-*.xml");
         ServletRegistration.Dynamic servletRegistration = servletContext.addServlet(PropertiesConfiguration.findPropertieValue(ClownContextPropertiesConstant.CLOWN_APPLICATION_NAME,"welcome use framework!")
                 ,dispatcherServlet);
         servletRegistration.setLoadOnStartup(1);

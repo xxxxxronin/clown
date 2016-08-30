@@ -34,7 +34,13 @@ public class ClownContextPropertiesConstant {
     public final static String CLOWN_CROSS_ALLOWHEADERS = "clown.cross.allowheaders";
 
     public final static String CLOWN_CROSS_ALLOWMETHODS = "clown.cross.allowmethods";
+
     public final static String CLOWN_CROSS_MAXAGE = "clown.cross.maxage";
+
+    /**
+     *
+     */
+    public static final String CLONW_IMPORT_TEMPLATE = "clonw.import.template";
 
     /**
      * 此配置项只有在clown.allow.crossdomain = true 有效，跨域拦截路由

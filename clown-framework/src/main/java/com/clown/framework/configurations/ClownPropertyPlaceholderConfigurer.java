@@ -46,6 +46,7 @@ public class ClownPropertyPlaceholderConfigurer extends PropertyPlaceholderConfi
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_CROSSDOMAIN_FILTERMAPPING,"/api/*");
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_APPLICATION_NAME,"welcome use clow framework!");
         properties.setProperty(ClownContextPropertiesConstant.CLOWN_ERROR_PAGE,"/404");
+        properties.setProperty(ClownContextPropertiesConstant.CLONW_IMPORT_TEMPLATE,"");
         setProperties(properties);
     }
 

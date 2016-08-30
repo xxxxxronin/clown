@@ -15,7 +15,7 @@
     <!--启用注解-->
     <context:annotation-config  />
     <!--控制器扫描-->
-    <context:component-scan base-package="com.clown.*" />
+    <context:component-scan base-package="com.clown.*.controller,com.clown.*.restful" />
     <!--suppress UnparsedCustomBeanInspection -->
     <!--默认的注解映射的支持-->
     <mvc:annotation-driven>
@@ -29,19 +29,16 @@
     <!--处理静态资源访问-->
     <mvc:resources mapping="/static/**" location="/static/" />
 
-    <!--加载配置文件-->
-    <bean id="configPropertiesBeanDefinitionRegistry" class="com.clown.framework.core.ConfigPropertiesBeanDefinitionRegistry">
-        <property name="useCutomRequestMappingHandlerMapping" value="true"></property>
-    </bean>
+
 
     <aop:aspectj-autoproxy proxy-target-class="true"/>
     <!-- 使用disconf必须添加以下配置 -->
-    <bean id="disconfMgrBean" class="com.clown.framework.core.DefaultDisconfMgrBean"
-          destroy-method="destroy">
-    </bean>
-    <bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond"
-          init-method="init" destroy-method="destroy">
-    </bean>
+    <!--<bean id="disconfMgrBean" class="com.clown.framework.core.DefaultDisconfMgrBean"-->
+          <!--destroy-method="destroy">-->
+    <!--</bean>-->
+    <!--<bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond"-->
+          <!--init-method="init" destroy-method="destroy">-->
+    <!--</bean>-->
 
     <bean id="applicationContextUtil" class="com.clown.framework.core.ApplicationContextUtil" ></bean>
 
@@ -80,8 +77,7 @@
                 <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
                 <prop key="date_format">yyyy-MM-dd</prop>
                 <prop key="number_format">#.##</prop>
-                <prop key="auto_import">${ms.import.template}</prop>
-                
+                <!--<prop key="auto_import">public/common.ftl as ui</prop>-->
             </props>
         </property>
     </bean>
@@ -98,7 +94,7 @@
     </bean>
 
     <bean id="exceptionHandler" class="com.clown.framework.exceptions.DefaultHandlerExceptionResolver">
-        <property name="errorPage" value="${ms.error.page}"/>
+        <property name="errorPage" value="${clown.error.page}"/>
     </bean>
 
   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
