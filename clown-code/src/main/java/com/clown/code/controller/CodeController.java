@@ -13,6 +13,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +28,7 @@ import java.util.List;
  */
 
 @Controller
-@RequestMapping(value = "")
+@RequestMapping(value = "/code")
 public class CodeController {
 
     @Resource
@@ -34,6 +38,70 @@ public class CodeController {
     public String index(Model model) throws Exception{
         return "home/index";
     }
+
+
+    /**
+     * 获得所有表
+     * @param dbName
+     * @return
+     */
+    @RequestMapping(value = "/{dbname}/tables",method = RequestMethod.GET)
+    @ResponseBody
+    public List<TableInfoModel> getTableAll(@PathVariable("dbname")String dbName){
+        try {
+           return dataBaseInfoService.findAllTableNames(dbName);
+        }
+        catch (Exception e){
+            return new ArrayList<>();
+        }
+    }
+
+
+    /**
+     * 获得所有字段
+     * @param dbName
+     * @param table
+     * @return
+     */
+    @RequestMapping(value = "/{dbname}/{table}/column",method = RequestMethod.GET)
+    @ResponseBody
+    public List<ColumnInfoModel> getTableAll(@PathVariable("dbname")String dbName,@PathVariable("table")String table){
+        try {
+            return dataBaseInfoService.findColumnInfo(dbName,table);
+        }
+        catch (Exception e){
+            return new ArrayList<>();
+        }
+    }
+
+    @RequestMapping(value = "/assets/{path}",method = RequestMethod.GET)
+    public String getAssets(@PathVariable("path")String path){
+        InputStream inputStream =null;
+        try {
+            inputStream =  CodeController.class.getResourceAsStream("/assets/"+path);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            StringBuilder sb = new StringBuilder();
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
+
+            }
+            return sb.toString();
+        }
+        catch (Exception e){
+           e.printStackTrace();
+        }
+        finally {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return "";
+    }
+
+
 
     /**
      * 根据表名生成实体
