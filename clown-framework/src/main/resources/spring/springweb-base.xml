@@ -60,8 +60,10 @@
 
 
     <!--FreeMarker整合Spring-->
+
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-        <property name="templateLoaderPaths" value="/template/" />
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="templateLoaderPath" value="/template/" />
         <property name="preferFileSystemAccess" value="false" />
         <property name="freemarkerVariables">
             <map>

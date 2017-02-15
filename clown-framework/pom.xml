@@ -10,10 +10,10 @@
 
     <packaging>jar</packaging>
     <properties>
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>4.3.6.RELEASE</spring.version>
         <spring.security.version>4.0.4.RELEASE</spring.security.version>
         <spring.security.jwt.version>1.0.4.RELEASE</spring.security.jwt.version>
-        <freemarker.version>2.3.19</freemarker.version>
+        <freemarker.version>2.3.23</freemarker.version>
         <mysql.version>5.1.16</mysql.version>
         <log4j.version>1.2.16</log4j.version>
         <org.slf4j.version>1.7.5</org.slf4j.version>
@@ -128,11 +128,13 @@
         </dependency>
 
         <!--freemarker html视图模板-->
+
         <dependency>
             <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
+            <artifactId>freemarker-gae</artifactId>
             <version>${freemarker.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>javax.servlet</groupId>

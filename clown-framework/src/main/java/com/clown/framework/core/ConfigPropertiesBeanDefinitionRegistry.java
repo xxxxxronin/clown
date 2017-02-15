@@ -41,7 +41,7 @@ public class ConfigPropertiesBeanDefinitionRegistry implements BeanDefinitionReg
         beanDefinition.setScope("singleton");
         beanDefinition.setPropertyValues(mutablePropertyValues);
         registry.registerBeanDefinition("propertyConfigurer",beanDefinition);
-
+//        org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation()
         // 注册自定义request mapping 处理器
         if(useCutomRequestMappingHandlerMapping){
             beanDefinition = new GenericBeanDefinition();
