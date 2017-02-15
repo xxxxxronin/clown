@@ -22,16 +22,14 @@ public class FrameworkLoadListeners extends ContextLoaderListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        // 添加spring 上下文监听
-        sce.getServletContext().setInitParameter("contextConfigLocation","classpath*:spring/spring-*.xml");
-        super.contextInitialized(sce);
-        customerContextInitialized(sce);
-        //添加shiro过滤操作
-//        DelegatingFilterProxy delegatingFilterProxy = new DelegatingFilterProxy();
-//        delegatingFilterProxy.setTargetFilterLifecycle(true);
-//        servletContext.addFilter("shiroFilter",delegatingFilterProxy).addMappingForUrlPatterns(null,false,"/*");
-
-
+        try {
+            sce.getServletContext().setInitParameter("contextConfigLocation","classpath*:spring/spring-*.xml");
+            super.contextInitialized(sce);
+            customerContextInitialized(sce);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override

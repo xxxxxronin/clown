@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -74,31 +75,46 @@ public class CodeController {
         }
     }
 
-    @RequestMapping(value = "/assets/{path}",method = RequestMethod.GET)
-    public String getAssets(@PathVariable("path")String path){
+    @RequestMapping(value = "/app/{path:.*}",method = RequestMethod.GET)
+    public void getAssets(@PathVariable("path") String path, HttpServletResponse response){
+
+
         InputStream inputStream =null;
         try {
-            inputStream =  CodeController.class.getResourceAsStream("/assets/"+path);
+
+            if(path.equals("code")){
+                response.getWriter().write("");
+                response.flushBuffer();
+                response.getWriter().close();
+                return;
+            }
+
+            inputStream =  CodeController.class.getResourceAsStream("/app/"+path);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder sb = new StringBuilder();
             String line = null;
             while ((line = reader.readLine()) != null) {
-                sb.append(line);
+                sb.append(line+"\n");
 
             }
-            return sb.toString();
+            response.getWriter().write(sb.toString());
+            response.flushBuffer();
+            response.getWriter().close();
         }
         catch (Exception e){
+            System.out.println(path);
            e.printStackTrace();
         }
         finally {
             try {
-                inputStream.close();
+                if(inputStream !=null){
+                    inputStream.close();
+                }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        return "";
     }
 
 

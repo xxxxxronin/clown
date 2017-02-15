@@ -1,6 +1,9 @@
 package com.clown.code.utils;
 
+import com.clown.framework.utils.DateUtil;
+
 import java.io.File;
+import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -54,5 +57,19 @@ public class ConvertUtil {
 
     public static void main(String[] args) throws Exception{
         System.out.println(File.separator);
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY,0);
+        calendar.set(Calendar.MINUTE,0);
+        calendar.set(Calendar.SECOND,0);
+
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.set(2016,9,1);
+
+        System.out.println(DateUtil.dateToString(calendar1.getTime(),DateUtil.DATE_FORMAT));
+        int dis = calendar.get(Calendar.DAY_OF_YEAR) - calendar1.get(Calendar.DAY_OF_YEAR);
+        System.out.println(dis);
+
+
+
     }
 }
