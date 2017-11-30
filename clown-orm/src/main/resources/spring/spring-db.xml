@@ -8,8 +8,8 @@
 
     <!--配置druid数据源-->
     <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-        <property name="url" value="${clown.db.url}"></property>
-        <property name="username" value="${clown.db.username}"></property>
+        <property name="url" value="${clown.db.url}"/>
+        <property name="username" value="${clown.db.username}"/>
         <property name="password" value="${clown.db.password}" />
         <property name="initialSize" value="1"/>
         <property name="maxActive" value="20"/>
@@ -50,10 +50,10 @@
         <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
     <!--</bean>-->
 
-    <bean class="com.clown.orm.core.MapperScannerConfigurerLoad" id="mapperScannerConfigurerLoad"></bean>
+    <bean class="com.clown.orm.core.MapperScannerConfigurerLoad" id="mapperScannerConfigurerLoad"/>
     
     <bean class="com.clown.orm.utils.SqlSessionFactoryUtil" name="sqlSessionFactoryUtil" init-method="init">
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>

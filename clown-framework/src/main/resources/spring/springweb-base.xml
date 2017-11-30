@@ -40,7 +40,7 @@
           <!--init-method="init" destroy-method="destroy">-->
     <!--</bean>-->
 
-    <bean id="applicationContextUtil" class="com.clown.framework.core.ApplicationContextUtil" ></bean>
+    <bean id="applicationContextUtil" class="com.clown.framework.core.ApplicationContextUtil"/>
 
     <!--result to json -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
@@ -62,7 +62,7 @@
     <!--FreeMarker整合Spring-->
 
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="defaultEncoding" value="UTF-8"/>
         <property name="templateLoaderPath" value="/template/" />
         <property name="preferFileSystemAccess" value="false" />
         <property name="freemarkerVariables">
@@ -91,7 +91,7 @@
         <property name="exposeSpringMacroHelpers" value="true" />
         <property name="exposeRequestAttributes" value="true" />
         <property name="exposeSessionAttributes" value="true" />
-        <property name="requestContextAttribute" value="request"></property>
+        <property name="requestContextAttribute" value="request"/>
         <property name="contentType" value="text/html;charset=utf-8"/>
     </bean>
 
@@ -116,7 +116,7 @@
 
     <bean id="messageSource"
           class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="i18n.message"></property>
+        <property name="basename" value="i18n.message"/>
         <property name="defaultEncoding" value="utf-8"/>
     </bean>
 

@@ -3,9 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="clown-soa"></dubbo:application>
-    <dubbo:registry address="N/A"></dubbo:registry>
+    <dubbo:application name="clown-soa"/>
+    <dubbo:registry address="N/A"/>
 
-    <bean id="demoService" class="com.clown.soa.service.impl.DemoServiceImpl"></bean>
-    <dubbo:service interface="com.clown.soa.service.DemoService" ref="demoService"></dubbo:service>
+    <bean id="demoService" class="com.clown.soa.service.impl.DemoServiceImpl"/>
+    <dubbo:service interface="com.clown.soa.service.DemoService" ref="demoService"/>
 </beans>
