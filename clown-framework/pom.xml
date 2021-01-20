@@ -18,7 +18,7 @@
         <log4j.version>1.2.16</log4j.version>
         <org.slf4j.version>1.7.5</org.slf4j.version>
         <log4j.version>1.2.16</log4j.version>
-        <org.codehaus.jackson.version>2.9.9</org.codehaus.jackson.version>
+        <org.codehaus.jackson.version>2.12.1</org.codehaus.jackson.version>
         <org.mybatis.version>3.3.0</org.mybatis.version>
         <org.mybatis.spring.version>1.2.3</org.mybatis.spring.version>
         <commons.fileupload.version>1.4</commons.fileupload.version>
