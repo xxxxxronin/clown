@@ -22,7 +22,7 @@
         <org.mybatis.version>3.3.0</org.mybatis.version>
         <org.mybatis.spring.version>1.2.3</org.mybatis.spring.version>
         <commons.fileupload.version>1.4</commons.fileupload.version>
-        <commons.io.version>2.4</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <com.google.zxing.core.version>2.0</com.google.zxing.core.version>
         <net.glxn.qrgen.version>1.4</net.glxn.qrgen.version>
         <com.google.zxing.javase.version>2.0</com.google.zxing.javase.version>
