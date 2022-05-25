@@ -10,7 +10,7 @@
 
     <packaging>jar</packaging>
     <properties>
-        <spring.version>5.1.7.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
         <spring.security.version>4.0.4.RELEASE</spring.security.version>
         <spring.security.jwt.version>1.0.4.RELEASE</spring.security.jwt.version>
         <freemarker.version>2.3.23</freemarker.version>
